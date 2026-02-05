@@ -14,16 +14,16 @@ from .serializers import AdminRegistrationSerializer, AdminLoginSerializer, Admi
 @permission_classes([AllowAny])
 def register(request):
     """Register a new admin user"""
-    serializer = AdminRegistrationSerializer(data=request.data)
-    
-    if not serializer.is_valid():
-        return error_response(
-            message=Messages.VALIDATION_ERROR,
-            errors=serializer.errors,
-            status_code=status.HTTP_400_BAD_REQUEST
-        )
-    
     try:
+        serializer = AdminRegistrationSerializer(data=request.data)
+        
+        if not serializer.is_valid():
+            return error_response(
+                message=Messages.VALIDATION_ERROR,
+                errors=serializer.errors,
+                status_code=status.HTTP_400_BAD_REQUEST
+            )
+        
         result = AuthService.register_admin(
             email=serializer.validated_data['email'],
             password=serializer.validated_data['password'],
