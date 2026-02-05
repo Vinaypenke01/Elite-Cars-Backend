@@ -28,6 +28,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
+    'https://elite-cars01.netlify.app',
 ]
 
 
@@ -174,6 +175,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
     'http://127.0.0.1:5173',
     'http://127.0.0.1:8080',
+    'https://elite-cars01.netlify.app',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
