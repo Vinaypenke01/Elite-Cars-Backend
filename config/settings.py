@@ -23,6 +23,10 @@ DEBUG = os.getenv('DEBUG', 'True') == 'True'
 # Handle ALLOWED_HOSTS
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 
+# SSL/HTTPS Configuration for Railway
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
+
 # CSRF Trusted Origins for Railway
 CSRF_TRUSTED_ORIGINS = [
     'https://*.railway.app',
