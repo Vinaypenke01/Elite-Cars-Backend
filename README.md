@@ -47,11 +47,23 @@ car_reseller_backend/
 
 ## Quick Start
 
-### 1. Install Dependencies
+### 1. Simple Setup
 
 ```bash
+# Clone the repository
 git clone https://github.com/Vinaypenke01/Elite-Cars-Backend.git
 cd Elite-Cars-Backend
+
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 
